@@ -1,0 +1,40 @@
+/* PHASE 1: Header */
+.header {
+  display: flex;
+  background-color: red;
+  /* align-items: center; */
+  ver
+  /* justify-content: space-between; */
+  height: 38px;
+}
+
+.header-logo {
+  font-family: 'Roboto', arial;
+  font-size: 16px;
+  color: white;
+  float: left;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 900px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.header-list li {
+  font-family: 'Roboto', arial;
+  font-size: 16px;
+  color: white;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 1px solid #ccc;
+}
+
+.header-list {
+  float: right;
+  display: block;
+}

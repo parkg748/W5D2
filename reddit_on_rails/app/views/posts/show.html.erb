@@ -1,0 +1,21 @@
+<h1><a href="<%= post_url(@post) %>"><%= @post.title %></a> by <%= current_user.username %></h1>
+<h3>Content:
+<br>
+<%= @post.content %>
+</h3>
+
+<h3><strong>Subs</strong></h3>
+<ul>
+  <% @post.subs.each do |sub| %>
+    <li><a href="<%= sub_url(sub) %>"><%= sub.title %></a></li>
+  <% end %>
+</ul>
+
+<h2>Comments</h2>
+<a href="<%= new_post_comment_url(@post) %>">Comment on this post!</a>
+<ul>
+  <% @post.comments.where(comment_id: nil).each do |comment| %>
+    <li><a href="<%= comment_url(comment) %>"><%= comment.content %></a></li>
+  <% end %>
+</ul>
+<a href="<%= edit_post_url %>">Edit</a>
